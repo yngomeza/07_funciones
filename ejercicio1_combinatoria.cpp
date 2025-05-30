@@ -16,6 +16,20 @@ int main() {
     cout << "Ingresa n: ";
     cin >> n;
 	
+	while (true) {
+        cout << "Ingresa m (entero positivo): ";
+        cin >> m;
+        if (m >= 0) break;
+        cout << "Error: m debe ser un entero positivo." << endl;
+    }
+
+    while (true) {
+        cout << "Ingresa n (entero positivo, menor que m): ";
+        cin >> n;
+        if (n >= 0 && n < m) break;
+        cout << "Error: n debe ser un entero positivo y menor que m." << endl;
+    }
+		
 	c = (factorial(m) / (factorial(n) * factorial(m - n)));
 	
 	cout << " " << endl;
