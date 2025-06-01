@@ -11,13 +11,18 @@ int dividir(int num1, int num2) {
     }
 
     int cociente = 0;
+    int restas = 0;
+    
     while (mayor >= menor) {
         mayor -= menor;
         cociente++;
+        restas++;
     }
-
+	
+	cout << " " << endl;
     cout << "Cociente: " << cociente << endl;
     cout << "Resto: " << mayor << endl;
+    cout << "Cantidad de restas realizadas: " << restas;
 }
 
 int main() {
@@ -29,6 +34,7 @@ int main() {
 	cout << "Segundo numero: ";
 	cin >> b;
 
+	
     dividir(a, b);
 
     return 0;
