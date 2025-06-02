@@ -10,6 +10,18 @@ int sumaDivisores(int n) {
     return suma;
 }
 
+int mostrarDivisores(int n) {
+    cout << "Divisores propios de " << n << ": ";
+    for (int i = 1; i < n; i++) {
+        if (n % i == 0)
+            cout << i << " ";
+    }
+    cout << endl;
+    
+    return 0;
+}
+
+
 int main() {
     int a, b;
     cout << "Ingresa dos numeros enteros positivos" << endl;
@@ -24,6 +36,9 @@ int main() {
         cout << a << " y " << b << " son numeros amigos." << endl;
     else
         cout << a << " y " << b << " no son numeros amigos." << endl;
+	
+	mostrarDivisores(a);
+	mostrarDivisores(b);
 
     return 0;
 }
