@@ -23,6 +23,8 @@ int dividir(int num1, int num2) {
     cout << "Cociente: " << cociente << endl;
     cout << "Resto: " << mayor << endl;
     cout << "Cantidad de restas realizadas: " << restas;
+    
+    return 0;
 }
 
 int main() {
