@@ -7,14 +7,19 @@ int esPerfecto(int n) {
         if (n % i == 0)
             suma += i;
     }
-    
     return suma == n;
 }
 
-int main() {
+	int main() {
+		
     int num;
-    cout << "Ingresa un numero: ";
+    cout << "Ingresa un numero entero positivo: ";
     cin >> num;
+
+    if (num <= 0) {
+        cout << "El numero debe ser entero positivo." << endl;
+        return 1;
+    }
 
     if (esPerfecto(num))
         cout << num << " es un numero perfecto." << endl;
