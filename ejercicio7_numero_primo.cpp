@@ -13,14 +13,23 @@ int esPrimo(int n) {
 
 int main() {
     int numero;
-    cout << "Ingresa un número entero positivo: ";
-    cin >> numero;
 
-    if (esPrimo(numero)) {
-        cout << numero << " es primo." << endl;
-    } else {
-        cout << numero << " no es primo." << endl;
-    }
+    do {
+        cout << "Ingresa un número entero positivo (0 para salir): ";
+        cin >> numero;
+
+        if (numero == 0) {
+            cout << "Programa finalizado." << endl;
+            break;
+        }
+
+        if (esPrimo(numero)) {
+            cout << numero << " es un número primo." << endl;
+        } else {
+            cout << numero << " no es un número primo." << endl;
+        }
+
+    } while (true);
 
     return 0;
 }
